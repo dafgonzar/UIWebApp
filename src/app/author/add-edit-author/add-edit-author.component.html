@@ -1,0 +1,31 @@
+<div class="form-froup row">
+
+    <label class="col-sm-10 col-form-label">Author Full Name</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="AuthorFullName"
+        placeholder="Enter Author Name">
+    </div>
+    <label class="col-sm-10 col-form-label">Author Date Of Birth</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="AuthorDateBirth"
+        placeholder="Enter Author Date Of Birth">
+    </div>
+    <label class="col-sm-10 col-form-label">Author City</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="AuthorCity"
+        placeholder="Enter Author City">
+    </div>
+    <label class="col-sm-10 col-form-label">Author Email</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="AuthorEmail"
+        placeholder="Enter Author Email">
+    </div>
+</div>
+<br>
+<button (click)="addAuthor()" *ngIf="author.AuthorId==0" class="btn btn-success">
+    Add
+</button>
+
+<button (click)="updateAuthor()" *ngIf="author.AuthorId!=0" class="btn btn-warning">
+    Edit
+</button>

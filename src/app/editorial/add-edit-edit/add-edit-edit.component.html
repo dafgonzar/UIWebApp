@@ -1,0 +1,37 @@
+<div class="form-froup row">
+
+    <label class="col-sm-10 col-form-label">Editorial Name</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="EditorialName"
+        placeholder="Enter Editorial Name">
+    </div>
+    <label class="col-sm-10 col-form-label">Editorial Adress</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="EditorialAdress"
+        placeholder="Enter Editorial Adress">
+    </div>
+    <label class="col-sm-10 col-form-label">Editorial Phone</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="EditorialPhone"
+        placeholder="Enter Editorial Phone">
+    </div>
+    <label class="col-sm-10 col-form-label">Editorial Email</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="EditorialEmail"
+        placeholder="Enter Editorial Email">
+    </div>
+    <label class="col-sm-10 col-form-label">Editorial Max Book</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="EditorialMaxBook"
+        placeholder="Enter Editorial Max Book">
+    </div>
+</div>
+<br>
+<button (click)="addEditorial()" *ngIf="edit.EditorialId==0" class="btn btn-success">
+    Add
+</button>
+
+<button (click)="updateEditorial()" *ngIf="edit.EditorialId!=0" class="btn btn-warning">
+    Edit
+</button>
+

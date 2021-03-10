@@ -1,0 +1,49 @@
+<div class="form-froup row">
+
+    <label class="col-sm-10 col-form-label">Book Title</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="BookTitle"
+        placeholder="Enter Book Title">
+    </div>
+    <label class="col-sm-10 col-form-label">Book Year</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="BookYear"
+        placeholder="Enter Book Year">
+    </div>
+    <label class="col-sm-10 col-form-label">Book Gender</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="BookGender"
+        placeholder="Enter Book Gender">
+    </div>
+    <label class="col-sm-10 col-form-label">Book Pages</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="BookPages"
+        placeholder="Enter Book Pages">
+    </div>
+    <label class="col-sm-10 col-form-label">Book Editorial</label>
+    <div class="col-sm-10">
+        <select class="form-control" [(ngModel)]="BookEditorialId">
+            <option>--Select--</option>
+            <option *ngFor="let editName of EditorialList" value="{{editName.EditorialId}}">
+                {{editName.EditorialName}}
+            </option>
+        </select>
+     </div>
+    <label class="col-sm-10 col-form-label">Book Author</label>
+    <div class="col-sm-10">
+        <select class="form-control" [(ngModel)]="BookAuthorId">
+            <option>--Select--</option>
+            <option *ngFor="let authorName of AuthorList" value="{{authorName.AuthorId}}">
+                {{authorName.AuthorFullName}}
+            </option>
+        </select>
+     </div>
+</div>
+<br>
+<button (click)="addBook()" *ngIf="book.BookId==0" class="btn btn-success">
+    Add
+</button>
+
+<button (click)="updateBook()" *ngIf="book.BookId!=0" class="btn btn-warning">
+    Edit
+</button>
